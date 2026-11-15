@@ -509,9 +509,14 @@ async function enviarRelatorio() {
     const mensagem =
         `📋 *RELATÓRIO DE ATIVIDADE*%0A` +
         `=========================%0A` +
-        `🧾 Nº OC: 2139905%0A` +
         `📅 ${d.data} | 🕒 ${d.hora}%0A` +
+        `🧾 Nº OC: 2139905%0A` +  
         `🎫 *CHAMADO:* ${d.chamado}%0A` +
+        
+        `${sep}%0A` +
+
+        `🛠️ *DESCRIÇÃO DA ATIVIDADE*%0A` +
+        `${d.atividade}%0A` +
 
         `${sep}%0A` +
 
@@ -524,10 +529,7 @@ async function enviarRelatorio() {
         `👷 *EQUIPE TÉCNICA*%0A` +
         `${equipeWhats}%0A` +
 
-        `${sep}%0A` +
-
-        `🛠️ *DESCRIÇÃO DA ATIVIDADE*%0A` +
-        `${d.atividade}%0A` +
+        
 
         `${sep}%0A` +
 
