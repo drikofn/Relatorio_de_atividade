@@ -207,14 +207,17 @@ const URL_GOOGLE_SHEETS = "https://script.google.com/macros/s/AKfycbxCk7qe9_BsLv
 
 // ===== TEXTOS FIXOS DA MENSAGEM DO WHATSAPP =====
 const CONTATO_EMERGENCIA =
-`CCE Rádio CANAL 1 /093 98115-1738/08007261048
-VIVO 093-991133465`;
+`*Rádio*
+CANAL 1
+*Telefones*
+093 98115-1738 / 093-991133465 / 08007261048`;
 
 // Preencha com os nomes e telefones, na ordem de acionamento
 const CADEIA_AJUDA =
-`1º NOME - TELEFONE
-2º NOME - TELEFONE
-3º NOME - TELEFONE`;
+`1º CCE
+2º Jean Soares - 93 99151-0863
+3º Francivaldo Costa - 93 99117-3761
+4º Deivison Aleidson - 93 98109-8461`;
 
 let colaboradores = [
     "Adriano Nascimento",
@@ -222,7 +225,7 @@ let colaboradores = [
     "Deivison Aleidson",
     "Deivison Barros",
     "Edenildo Rodrigues",
-    "Ezequiel",
+    "Ezequiel Almeida",
     "Francivaldo Costa",
     "Jean Soares",
     "Joelcinei Guimarães",
@@ -533,7 +536,7 @@ async function enviarRelatorio() {
 
         `${sep}%0A` +
 
-        `🚨 *CONTATO DE EMERGÊNCIA*%0A` +
+        `🚨 *CONTATO DE EMERGÊNCIA CCE*%0A` +
         `${contatoEmergencia}%0A` +
 
         `${sep}%0A` +
