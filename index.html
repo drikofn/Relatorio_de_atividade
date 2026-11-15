@@ -6,239 +6,234 @@
 <title>RELATÓRIO DE ATIVIDADE</title>
 <style>
 :root {
---primary: #25d366;
---primary-dark: #128c7e;
---danger: #ff4d4d;
---bg: #f0f2f5;
---text: #1c1e21;
---white: #ffffff;
---gray-light: #f5f6f7;
+    --primary: #25d366;
+    --primary-dark: #128c7e;
+    --danger: #ff4d4d;
+    --bg: #f0f2f5;
+    --text: #1c1e21;
+    --white: #ffffff;
+    --gray-light: #f5f6f7;
 }
 
-```
-    body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); padding: 15px; margin: 0; }
-    .container { max-width: 500px; background: var(--white); padding: 25px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); margin: auto; }
+body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); padding: 15px; margin: 0; }
+.container { max-width: 500px; background: var(--white); padding: 25px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); margin: auto; }
 
-    h2 { color: var(--primary-dark); text-align: center; margin-bottom: 25px; font-weight: 700; text-transform: uppercase; }
-    .form-group { margin-bottom: 18px; }
-    label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85rem; color: #606770; }
+h2 { color: var(--primary-dark); text-align: center; margin-bottom: 25px; font-weight: 700; text-transform: uppercase; }
+.form-group { margin-bottom: 18px; }
+label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85rem; color: #606770; }
 
-    input, select, textarea {
-        width: 100%; padding: 12px; border: 1.5px solid #dddfe2; border-radius: 10px;
-        font-size: 16px; box-sizing: border-box; transition: border-color 0.2s;
-    }
-    input:focus { border-color: var(--primary); outline: none; }
+input, select, textarea {
+    width: 100%; padding: 12px; border: 1.5px solid #dddfe2; border-radius: 10px;
+    font-size: 16px; box-sizing: border-box; transition: border-color 0.2s;
+}
+input:focus { border-color: var(--primary); outline: none; }
 
-    .equipe-badge-container { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
-    .badge {
-        background: #e7f3ff; color: #1877f2; padding: 6px 14px; border-radius: 50px;
-        font-size: 0.85rem; display: flex; align-items: center; font-weight: 600;
-    }
-    .badge span { margin-left: 8px; cursor: pointer; color: #1877f2; font-size: 1.2rem; }
+.equipe-badge-container { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.badge {
+    background: #e7f3ff; color: #1877f2; padding: 6px 14px; border-radius: 50px;
+    font-size: 0.85rem; display: flex; align-items: center; font-weight: 600;
+}
+.badge span { margin-left: 8px; cursor: pointer; color: #1877f2; font-size: 1.2rem; }
 
-    .btn-whatsapp {
-        background: var(--primary); color: white; border: none; border-radius: 10px;
-        width: 100%; font-size: 1rem; font-weight: 700; cursor: pointer; margin-top: 15px;
-        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-        padding: 16px;
-    }
+.btn-whatsapp {
+    background: var(--primary); color: white; border: none; border-radius: 10px;
+    width: 100%; font-size: 1rem; font-weight: 700; cursor: pointer; margin-top: 15px;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    padding: 16px;
+}
 
-    .btn-reset {
-        background: none; color: var(--danger); border: 1px dashed var(--danger); border-radius: 10px;
-        width: 100%; font-size: 0.85rem; font-weight: 600; cursor: pointer; margin-top: 10px;
-        padding: 10px; transition: background 0.2s;
-    }
-    .btn-reset:hover { background: #fff5f5; }
+.btn-reset {
+    background: none; color: var(--danger); border: 1px dashed var(--danger); border-radius: 10px;
+    width: 100%; font-size: 0.85rem; font-weight: 600; cursor: pointer; margin-top: 10px;
+    padding: 10px; transition: background 0.2s;
+}
+.btn-reset:hover { background: #fff5f5; }
 
-    .modal-overlay {
-        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-        background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(4px);
-        display: none; justify-content: center; align-items: center; z-index: 1000;
-    }
-    .modal-content {
-        background: var(--white); width: 90%; max-width: 400px; padding: 20px;
-        border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
+.modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(4px);
+    display: none; justify-content: center; align-items: center; z-index: 1000;
+}
+.modal-content {
+    background: var(--white); width: 90%; max-width: 400px; padding: 20px;
+    border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
 
-    .admin-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-    .add-box { display: flex; gap: 8px; margin-bottom: 20px; }
-    .colab-list { max-height: 250px; overflow-y: auto; }
-    .colab-item {
-        display: flex; justify-content: space-between; align-items: center;
-        padding: 12px; background: var(--gray-light); border-radius: 10px;
-        margin-bottom: 8px; font-size: 0.95rem; font-weight: 500;
-    }
-    .btn-del { color: var(--danger); background: none; border: none; cursor: pointer; font-weight: bold; }
+.admin-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.add-box { display: flex; gap: 8px; margin-bottom: 20px; }
+.colab-list { max-height: 250px; overflow-y: auto; }
+.colab-item {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px; background: var(--gray-light); border-radius: 10px;
+    margin-bottom: 8px; font-size: 0.95rem; font-weight: 500;
+}
+.btn-del { color: var(--danger); background: none; border: none; cursor: pointer; font-weight: bold; }
 
-    .btn-admin-open {
-        background: none; color: #8a8d91; font-size: 0.85rem; border: none;
-        margin: 25px auto 0; display: block; cursor: pointer; text-decoration: underline;
-    }
+.btn-admin-open {
+    background: none; color: #8a8d91; font-size: 0.85rem; border: none;
+    margin: 25px auto 0; display: block; cursor: pointer; text-decoration: underline;
+}
 </style>
-```
-
 </head>
 <body>
 
 <div class="container">
-<h2>RELATÓRIO DE ATIVIDADE</h2>
+    <h2>RELATÓRIO DE ATIVIDADE</h2>
 
-```
-<form id="mainForm">
-    <div class="form-group">
-        <label type="text">Nº OC: 2139905</label></br>
-        <label>Atividade:</label>
-        <input type="text" id="atividade" placeholder="Ex: Manutenção Preventiva" oninput="salvarRascunho()" required>
-    </div>
-
-    <div style="display: flex; gap: 10px;">
-        <div class="form-group" style="flex:1">
-            <label>Data:</label>
-            <input type="text" id="data_auto" readonly required>
+    <form id="mainForm">
+        <div class="form-group">
+            <label>Nº OC: 2139905</label>
+            <label>Atividade:</label>
+            <input type="text" id="atividade" placeholder="Ex: Manutenção Preventiva" oninput="salvarRascunho()" required>
         </div>
-        <div class="form-group" style="flex:1">
-            <label>Hora:</label>
-            <input type="text" id="hora_auto" readonly required>
+
+        <div style="display: flex; gap: 10px;">
+            <div class="form-group" style="flex:1">
+                <label>Data:</label>
+                <input type="text" id="data_auto" readonly required>
+            </div>
+            <div class="form-group" style="flex:1">
+                <label>Hora:</label>
+                <input type="text" id="hora_auto" readonly required>
+            </div>
         </div>
-    </div>
-```
 
-<div class="form-group">
-<label>Tipo de Chamado:</label>
-<select id="tipo_chamado" onchange="salvarRascunho()" required>
-<option value="SCTASK">📋 Solicitação</option>
-<option value="INC">🚨 Incidente</option>
-</select>
-</div>
-
-<div class="form-group">
-<label>Nº Chamado:</label>
-<input type="text"
-id="chamado"
-placeholder="Ex: 1234567"
-oninput="salvarRascunho()"
-required>
-</div>
-
-```
-    <div class="form-group">
-        <label>Equipe Técnica:</label>
-        <select id="selectColaboradores" onchange="adicionarColaborador()">
-            <option value="">Selecione...</option>
-        </select>
-        <div class="equipe-badge-container" id="badgesEquipe"></div>
-    </div>
-
-    <div style="display: flex; gap: 10px;">
-        <div class="form-group" style="flex:1">
-            <label>Site:</label>
-            <select id="site" onchange="salvarRascunho()" required>
-                <option value="">Selecione...</option>
-                <option value="JPO">JPO</option>
-                <option value="JBE">JBE</option>
+        <div class="form-group">
+            <label>Tipo de Chamado:</label>
+            <select id="tipo_chamado" onchange="salvarRascunho()" required>
+                <option value="SCTASK">📋 Solicitação</option>
+                <option value="INC">🚨 Incidente</option>
             </select>
         </div>
-        <div class="form-group" style="flex:1">
-            <label>Local:</label>
-            <input type="text" id="local" placeholder="Ex: Portaria" oninput="salvarRascunho()" required>
+
+        <div class="form-group">
+            <label>Nº Chamado:</label>
+            <input type="text" id="chamado" placeholder="Ex: 1234567" oninput="salvarRascunho()" required>
         </div>
-    </div>
 
-    <div class="form-group">
-        <label>Utilizou SkyMunck?</label>
-        <select id="skymunck" onchange="salvarRascunho()" required>
-            <option value="Não">Não</option>
-            <option value="Sim">Sim</option>
-        </select>
-    </div>
+        <div class="form-group">
+            <label>Equipe Técnica:</label>
+            <select id="selectColaboradores" onchange="adicionarColaborador()">
+                <option value="">Selecione...</option>
+            </select>
+            <div class="equipe-badge-container" id="badgesEquipe"></div>
+        </div>
 
-    <div class="form-group">
-        <label>Status Geral:</label>
-        <select id="status" onchange="verificarStatusGeral(); salvarRascunho();" required>
-            <option value="Iniciado hoje">🚀 Iniciada hoje</option>
-            <option value="Concluído">✅ Concluído</option>
-            <option value="Pendente">⚠️ Pendente</option>
-            <option value="Em Andamento">⏳ Em Andamento</option>
-            <option value="Continuação">🔄 Continuação</option>
-        </select>
-    </div>
+        <div style="display: flex; gap: 10px;">
+            <div class="form-group" style="flex:1">
+                <label>Site:</label>
+                <select id="site" onchange="salvarRascunho()" required>
+                    <option value="">Selecione...</option>
+                    <option value="JPO">JPO</option>
+                    <option value="JBE">JBE</option>
+                </select>
+            </div>
+            <div class="form-group" style="flex:1">
+                <label>Local:</label>
+                <input type="text" id="local" placeholder="Ex: Portaria" oninput="salvarRascunho()" required>
+            </div>
+        </div>
 
-    <!-- Aparece se Pendente, Em Andamento ou Concluído -->
-    <div class="form-group" id="grupoProgresso" style="display: none;">
-        <label>Progresso de Hoje:</label>
-        <select id="progresso_hoje" onchange="salvarRascunho()">
-            <option value="">Selecione...</option>
-            <option value="Atividade finalizada">Atividade finalizada</option>
-            <option value="🏁 Concluída hoje(continua)">🏁 Concluída hoje(continua)</option>
-            <option value="🏁 Concluída hoje">🏁 Concluída hoje</option>
-        </select>
-    </div>
+        <div class="form-group">
+            <label>Utilizou SkyMunck?</label>
+            <select id="skymunck" onchange="salvarRascunho()" required>
+                <option value="Não">Não</option>
+                <option value="Sim">Sim</option>
+            </select>
+        </div>
 
-    <!-- Campo Etapa Realizada Hoje -->
-    <div class="form-group" id="grupoEtapaHoje" style="display: none;">
-        <label>Etapa realizada hoje:</label>
-        <input type="text" id="etapa_hoje" placeholder="Ex: Lançamento de cabo óptico" oninput="salvarRascunho()">
-    </div>
+        <div class="form-group">
+            <label>Status Geral:</label>
+            <select id="status" onchange="verificarStatusGeral(); salvarRascunho();" required>
+                <option value="Iniciado hoje">🚀 Iniciada hoje</option>
+                <option value="Concluído">✅ Concluído</option>
+                <option value="Pendente">⚠️ Pendente</option>
+                <option value="Em Andamento">⏳ Em Andamento</option>
+                <option value="Continuação">🔄 Continuação</option>
+            </select>
+        </div>
 
-    <div class="form-group">
-        <label>Comentários:</label>
-        <textarea id="comentarios" rows="3" oninput="salvarRascunho()"></textarea>
-    </div>
+        <!-- Aparece se Pendente, Em Andamento ou Concluído -->
+        <div class="form-group" id="grupoProgresso" style="display: none;">
+            <label>Progresso de Hoje:</label>
+            <select id="progresso_hoje" onchange="salvarRascunho()">
+                <option value="">Selecione...</option>
+                <option value="Atividade finalizada">Atividade finalizada</option>
+                <option value="🏁 Concluída hoje(continua)">🏁 Concluída hoje(continua)</option>
+                <option value="🏁 Concluída hoje">🏁 Concluída hoje</option>
+            </select>
+        </div>
 
-    <button type="button" class="btn-whatsapp" onclick="enviarRelatorio()">
-        ENVIAR RELATÓRIO
-    </button>
+        <!-- Campo Etapa Realizada Hoje -->
+        <div class="form-group" id="grupoEtapaHoje" style="display: none;">
+            <label>Etapa realizada hoje:</label>
+            <input type="text" id="etapa_hoje" placeholder="Ex: Lançamento de cabo óptico" oninput="salvarRascunho()">
+        </div>
 
-    <button type="button" class="btn-reset" onclick="limparFormularioTotal()">
-        🔄 Limpar Formulário / Nova Atividade
-    </button>
-</form>
+        <div class="form-group">
+            <label>Comentários:</label>
+            <textarea id="comentarios" rows="3" oninput="salvarRascunho()"></textarea>
+        </div>
 
-<button class="btn-admin-open" onclick="toggleModal(true)">⚙️ Gerenciar Equipe</button>
-```
+        <button type="button" class="btn-whatsapp" onclick="enviarRelatorio()">
+            ENVIAR RELATÓRIO
+        </button>
 
+        <button type="button" class="btn-reset" onclick="limparFormularioTotal()">
+            🔄 Limpar Formulário / Nova Atividade
+        </button>
+    </form>
+
+    <button class="btn-admin-open" onclick="toggleModal(true)">⚙️ Gerenciar Equipe</button>
 </div>
 
 <div class="modal-overlay" id="modalEquipe">
-<div class="modal-content">
-<div class="admin-header">
-<h3>Gerenciar Equipe</h3>
-<button onclick="toggleModal(false)" style="background:none; border:none; font-size: 1.5rem; cursor:pointer;">×</button>
-</div>
-<div class="add-box">
-<input type="text" id="novoNome" placeholder="Nome">
-<button onclick="addNovoColab()" style="background: var(--primary-dark); color: white; border: none; padding: 0 15px; border-radius: 8px; cursor: pointer;">ADD</button>
-</div>
-<div class="colab-list" id="listaAdminColaboradores"></div>
-<button onclick="toggleModal(false)" style="width: 100%; padding: 12px; margin-top: 15px; border: none; border-radius: 10px; background: #eee; font-weight: 600; cursor: pointer;">Concluir</button>
-</div>
+    <div class="modal-content">
+        <div class="admin-header">
+            <h3>Gerenciar Equipe</h3>
+            <button onclick="toggleModal(false)" style="background:none; border:none; font-size: 1.5rem; cursor:pointer;">×</button>
+        </div>
+        <div class="add-box">
+            <input type="text" id="novoNome" placeholder="Nome">
+            <button onclick="addNovoColab()" style="background: var(--primary-dark); color: white; border: none; padding: 0 15px; border-radius: 8px; cursor: pointer;">ADD</button>
+        </div>
+        <div class="colab-list" id="listaAdminColaboradores"></div>
+        <button onclick="toggleModal(false)" style="width: 100%; padding: 12px; margin-top: 15px; border: none; border-radius: 10px; background: #eee; font-weight: 600; cursor: pointer;">Concluir</button>
+    </div>
 </div>
 
 <script>
 const URL_GOOGLE_SHEETS = "https://script.google.com/macros/s/AKfycbxCk7qe9_BsLv6FFNUdbp2EiV4qTxM729Q6Ld1SznIeYtksEBuOvqX9Pt99xhxF_WE/exec";
 
-```
-let colaboradores = [
-"Adriano Nascimento",
-"Cezar Prado",
-"Deivison Aleidson",
-"Deivison Barros",
-"Edenildo Rodrigues",
-"Ezequiel",
-"Francivaldo Costa",
-"Jean Soares",
-"Joelcinei Guimarães",
-"José Antônio",
-"Lucas Santos",
-"Matheus Costa",
-"Reginaldo Pereira",
-"Welyton Pereira"
-```
+// ===== TEXTOS FIXOS DA MENSAGEM DO WHATSAPP =====
+const CONTATO_EMERGENCIA =
+`CCE Rádio CANAL 1 /093 98115-1738/08007261048
+VIVO 093-991133465`;
 
+// Preencha com os nomes e telefones, na ordem de acionamento
+const CADEIA_AJUDA =
+`1º NOME - TELEFONE
+2º NOME - TELEFONE
+3º NOME - TELEFONE`;
+
+let colaboradores = [
+    "Adriano Nascimento",
+    "Cezar Prado",
+    "Deivison Aleidson",
+    "Deivison Barros",
+    "Edenildo Rodrigues",
+    "Ezequiel",
+    "Francivaldo Costa",
+    "Jean Soares",
+    "Joelcinei Guimarães",
+    "José Antônio",
+    "Lucas Santos",
+    "Matheus Costa",
+    "Reginaldo Pereira",
+    "Welyton Pereira"
 ];
 let equipeSelecionada = [];
 
-```
 if (localStorage.getItem('tecnicos_v15')) {
     colaboradores = JSON.parse(localStorage.getItem('tecnicos_v15'));
 }
@@ -301,7 +296,7 @@ function addNovoColab() {
 }
 
 function excluirColaborador(nome) {
-    if(confirm(`Remover ${nome}?`)) {
+    if (confirm(`Remover ${nome}?`)) {
         colaboradores = colaboradores.filter(n => n !== nome);
         localStorage.setItem('tecnicos_v15', JSON.stringify(colaboradores));
         atualizarSelect();
@@ -311,7 +306,7 @@ function excluirColaborador(nome) {
 function atualizarDataHora() {
     const agora = new Date();
     document.getElementById('data_auto').value = agora.toLocaleDateString('pt-BR');
-    document.getElementById('hora_auto').value = agora.toLocaleTimeString('pt-BR', {hour: '2-digit', minute:'2-digit'});
+    document.getElementById('hora_auto').value = agora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
 }
 
 function verificarStatusGeral() {
@@ -359,7 +354,6 @@ function verificarStatusGeral() {
 }
 
 function salvarRascunho() {
-
     const statusVal = document.getElementById('status').value;
     const progressoVal = document.getElementById('progresso_hoje').value;
     const temEtapa = (statusVal === "Pendente" || statusVal === "Em Andamento");
@@ -471,21 +465,16 @@ async function enviarRelatorio() {
         progressoFinal = progressoHojeVal;
     }
 
-    const tipoChamado =
-         document.getElementById('tipo_chamado').value;
-        const numeroChamado =
-        document.getElementById('chamado').value.trim();
-        const chamadoCompleto =
-        `${tipoChamado}${numeroChamado}`;
+    const tipoChamado = document.getElementById('tipo_chamado').value;
+    const numeroChamado = document.getElementById('chamado').value.trim();
+    const chamadoCompleto = `${tipoChamado}${numeroChamado}`;
 
     const d = {
         atividade: document.getElementById('atividade').value,
         etapa_hoje: ativoComEtapa ? etapaHojeVal : "N/A",
         data: document.getElementById('data_auto').value,
         hora: document.getElementById('hora_auto').value,
-        //chamado: document.getElementById('chamado').value.toUpperCase(),
         chamado: chamadoCompleto,
-
         equipe: equipeSelecionada.join(', '),
         site: document.getElementById('site').value,
         local: document.getElementById('local').value,
@@ -500,85 +489,67 @@ async function enviarRelatorio() {
 
     // Envio WhatsApp
     const sep = "───────────────";
-    //const sep = "----------------------------------------";
     const equipeWhats = encodeURIComponent(equipeSelecionada.join('\n'));
+    const contatoEmergencia = encodeURIComponent(CONTATO_EMERGENCIA);
+    const cadeiaAjuda = encodeURIComponent(CADEIA_AJUDA);
 
-    //let blocoExtraWhats = `*Progresso de Hoje:*%0A${d.progresso}%0A${sep}%0A`;
-      let blocoExtraWhats = `*Progresso de Hoje:*%0A${d.progresso}%0A`;
+    let blocoExtraWhats = `*Progresso de Hoje:*%0A${d.progresso}%0A`;
     if (ativoComEtapa) {
         blocoExtraWhats += `*Etapa Realizada Hoje:*%0A${d.etapa_hoje}%0A`;
     }
 
-    //const mensagem = `*RELATÓRIO DE ATIVIDADE*%0A` +
-        //`${sep}%0A` +
-        //`*Nº OC:* 2139905%0A` +
-        //`${sep}%0A` +
-        //`*Atividade:*%0A${d.atividade}%0A` +
-        //`${sep}%0A` +
-        //`*Data:*%0A${d.data}%0A` +
-        //`${sep}%0A` +
-        //`*Hora:*%0A${d.hora}%0A` +
-        //`${sep}%0A` +
-        //`*Nº Chamado:*%0A${d.chamado}%0A` +
-        //`${sep}%0A` +
-        //`*Colaboradores:*%0A${equipeWhats}%0A` +
-        //`${sep}%0A` +
-        //`*Site:*%0A${d.site}%0A` +
-        //`${sep}%0A` +
-        //`*Local:*%0A${d.local}%0A` +
-        //`${sep}%0A` +
-        //`*Utilização SkyMunck:*%0A${d.skymunck}%0A` +
-        //`${sep}%0A` +
-        //`*Status Geral:*%0A${d.status}%0A` +
-        //`${sep}%0A` +
-        //blocoExtraWhats +
-        //`*Comentários:*%0A${d.obs}%0A` +
-        //`${sep}`;
-```
+    const mensagem =
+        `📋 *RELATÓRIO DE ATIVIDADE*%0A` +
+        `=========================%0A` +
+        `🧾 Nº OC: 2139905%0A` +
+        `📅 ${d.data} | 🕒 ${d.hora}%0A` +
+        `🎫 *CHAMADO:* ${d.chamado}%0A` +
 
-const mensagem =
-`📋 *RELATÓRIO DE ATIVIDADE*%0A` +
-`=========================%0A` +
-`🧾 Nº OC: 2139905%0A` +
-`📅 ${d.data} | 🕒 ${d.hora}%0A` +
-`🎫 *CHAMADO:* ${d.chamado}%0A` +
+        `${sep}%0A` +
 
-`${sep}%0A` +
+        `📍 *LOCAL*%0A` +
+        `Site: ${d.site}%0A` +
+        `Local: ${d.local}%0A` +
 
-`📍 *LOCAL*%0A` +
-`Site: ${d.site}%0A` +
-`Local: ${d.local}%0A` +
+        `${sep}%0A` +
 
-`${sep}%0A` +
+        `👷 *EQUIPE TÉCNICA*%0A` +
+        `${equipeWhats}%0A` +
 
-`👷 *EQUIPE TÉCNICA*%0A` +
-`${equipeWhats}%0A` +
+        `${sep}%0A` +
 
-`${sep}%0A` +
+        `🛠️ *ATIVIDADE*%0A` +
+        `${d.atividade}%0A` +
 
-`🛠️ *ATIVIDADE*%0A` +
-`${d.atividade}%0A` +
+        `${sep}%0A` +
 
-`${sep}%0A` +
+        `📊 *STATUS*%0A` +
+        `Status Geral: ${d.status}%0A` +
 
-`📊 *STATUS*%0A` +
-`Status Geral: ${d.status}%0A` +
+        `${sep}%0A` +
 
-`${sep}%0A` +
+        `🚚 *RECURSOS*%0A` +
+        `Sky Munck: ${d.skymunck}%0A` +
 
-`🚚 *RECURSOS*%0A` +
-`Sky Munck: ${d.skymunck}%0A` +
+        `${sep}%0A` +
 
-`${sep}%0A` +
+        `🚨 *CONTATO DE EMERGÊNCIA*%0A` +
+        `${contatoEmergencia}%0A` +
 
-blocoExtraWhats +
+        `${sep}%0A` +
 
-`${sep}%0A` +
+        `🆘 *CADEIA DE AJUDA*%0A` +
+        `${cadeiaAjuda}%0A` +
 
-`📝 *OBSERVAÇÕES*%0A` +
-`${d.obs}%0A`;
+        `${sep}%0A` +
 
-```
+        blocoExtraWhats +
+
+        `${sep}%0A` +
+
+        `📝 *OBSERVAÇÕES*%0A` +
+        `${d.obs}%0A`;
+
     window.open(`https://api.whatsapp.com/send?text=${mensagem}`, '_blank');
 
     // Limpeza automática se concluído
@@ -599,15 +570,11 @@ blocoExtraWhats +
     }
 }
 
-window.onload = function() {
+window.onload = function () {
     atualizarDataHora();
     atualizarSelect();
     carregarRascunho();
 };
-```
-
 </script>
 </body>
 </html>
-
-meio de comunicação.**(CCE Rádio CANAL 1 /093 98115-1738/08007261048\ VIVO 093-991133465)**
