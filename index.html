@@ -546,7 +546,7 @@ async function enviarRelatorio() {
         `${sep}%0A` +
 
         `📝 *OBSERVAÇÕES*%0A` +
-        `${d.obs}%0A`
+        `${d.obs}%0A` +
 
         `${sep}%0A` +
 
@@ -556,7 +556,7 @@ async function enviarRelatorio() {
         `${sep}%0A` +
 
         `🆘 *CADEIA DE AJUDA*%0A` +
-        `${cadeiaAjuda}%0A` +
+        `${cadeiaAjuda}%0A` 
         ;
 
     window.open(`https://api.whatsapp.com/send?text=${mensagem}`, '_blank');
