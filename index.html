@@ -207,17 +207,22 @@ const URL_GOOGLE_SHEETS = "https://script.google.com/macros/s/AKfycbxCk7qe9_BsLv
 
 // ===== TEXTOS FIXOS DA MENSAGEM DO WHATSAPP =====
 const CONTATO_EMERGENCIA =
-`*Rádio*
-CANAL 1
-*Telefones*
-093 98115-1738 / 093-991133465 / 08007261048`;
+`Rádio
+Canal 1
+Telefones
+093 98115-1738
+093-991133465
+08007261048`;
 
 // Preencha com os nomes e telefones, na ordem de acionamento
 const CADEIA_AJUDA =
 `1º CCE
-2º Jean Soares - 93 99151-0863
-3º Francivaldo Costa - 93 99117-3761
-4º Deivison Aleidson - 93 98109-8461`;
+2º Jean Soares
+93 99151-0863
+3º Francivaldo Costa
+93 99117-3761
+4º Deivison Aleidson
+93 98109-8461`;
 
 let colaboradores = [
     "Adriano Nascimento",
@@ -521,7 +526,7 @@ async function enviarRelatorio() {
 
         `${sep}%0A` +
 
-        `🛠️ *ATIVIDADE*%0A` +
+        `🛠️ *DESCRIÇÃO DA ATIVIDADE*%0A` +
         `${d.atividade}%0A` +
 
         `${sep}%0A` +
@@ -536,6 +541,15 @@ async function enviarRelatorio() {
 
         `${sep}%0A` +
 
+        blocoExtraWhats +
+
+        `${sep}%0A` +
+
+        `📝 *OBSERVAÇÕES*%0A` +
+        `${d.obs}%0A`
+
+        `${sep}%0A` +
+
         `🚨 *CONTATO DE EMERGÊNCIA CCE*%0A` +
         `${contatoEmergencia}%0A` +
 
@@ -543,15 +557,7 @@ async function enviarRelatorio() {
 
         `🆘 *CADEIA DE AJUDA*%0A` +
         `${cadeiaAjuda}%0A` +
-
-        `${sep}%0A` +
-
-        blocoExtraWhats +
-
-        `${sep}%0A` +
-
-        `📝 *OBSERVAÇÕES*%0A` +
-        `${d.obs}%0A`;
+        ;
 
     window.open(`https://api.whatsapp.com/send?text=${mensagem}`, '_blank');
 
